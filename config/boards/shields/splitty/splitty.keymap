@@ -1,0 +1,48 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+/ {
+	keymap0: keymap {
+		compatible = "zmk,keymap";
+
+		default_layer {
+// -----------------------------------------------------------------------------------------
+// |  ESC |  1  |  2  |   3  |  4  |  5  |  -  |               |  +  |   6  |  7  |  8  |  9  |  0  |   \  |
+// |  TAB |  Q  |  W  |   E  |  R  |  T  |  [  |               |  ]  |   Y  |  U  |  I  |  O  |  P  | BKSP |
+// | CTRL |  A  |  S  |   D  |  F  |  G  |  `  |               |  ~  |   H  |  J  |  K  |  L  |  ;  |  ENT |
+// | SHFT |  Z  |  X  |   C  |  V  |  B  | SPC | SPC |   | SPC | SPC |   N  |  M  |  ,  |  .  |  /  |   '  |
+//                    | CAPS | GUI | ALT | LWR | SPC |   | SPC |RAISE| SHFT | GUI | DEL |                   
+			bindings = <
+	&gresc    &kp N1 &kp N2 &kp N3   &kp N4   &kp N5   &kp MINUS                        &kp PLUS     &kp N6    &kp N7   &kp N8    &kp N9  &kp N0   &kp BSLH
+	&kp TAB   &kp Q  &kp W  &kp E    &kp R    &kp T    &kp LBKT                         &kp RBKT     &kp Y     &kp U    &kp I     &kp O   &kp P    &kp BSPC
+	&kp LCTRL &kp A  &kp S  &kp D    &kp F    &kp G    &kp GRAVE                        &kp TILDE    &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp RET
+	&kp LSHFT &kp Z  &kp X  &kp C    &kp V    &kp B    &kp SPACE &kp SPACE    &kp SPACE &out OUT_TOG &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp SQT
+	                        &kp CLCK &kp LGUI &kp LALT &mo 1     &kp SPACE    &kp SPACE &mo 2        &kp RSHFT &kp RGUI &kp DEL
+			>;
+		};
+
+		lower_layer {
+			bindings = <
+	&gresc    &kp F1       &kp F2       &kp F3     &kp F4   &kp F5   &kp F11                          &kp F12   &kp F6    &kp F7   &kp F8          &kp F9  &kp F10  &kp BSLH
+	&kp TAB   &kp PG_UP    &kp UP       &kp PG_DN  &kp R    &kp T    &kp PG_UP                        &kp PG_DN &kp PSCRN &kp SLCK &kp PAUSE_BREAK &kp O   &kp P    &kp BSPC
+	&kp LCTRL &kp LEFT     &kp DOWN     &kp RIGHT  &kp DEL  &kp G    &kp DEL                          &kp INS   &kp INS   &kp HOME &kp PG_UP       &kp L   &kp SEMI &kp RET
+	&kp LSHFT &kp C_VOL_UP &kp C_VOL_DN &kp C_MUTE &kp V    &kp B    &kp SPACE &kp SPACE    &kp SPACE &kp SPACE &kp DEL   &kp END  &kp PG_DN       &kp DOT &kp FSLH &kp SQT
+	                                    &kp CLCK   &kp LGUI &kp LALT &mo 1     &kp SPACE    &kp SPACE &mo 2     &kp RSHFT &kp RGUI &kp INS
+			>;
+		};
+
+		raise_layer {
+			bindings = <
+	&bt BT_CLR &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &kp N5   &sys_reset                       &sys_reset  &kp N6    &kp N7   &kp N8    &kp N9  &kp N0   &kp BSLH
+	&kp TAB    &ext_power EP_ON  &rgb_ug RGB_ON  &rgb_ug RGB_EFF &kp R        &kp T    &bootloader                      &bootloader &kp Y     &kp U    &kp I     &kp O   &kp P    &kp BSPC
+	&kp LCTRL  &ext_power EP_OFF &rgb_ug RGB_OFF &rgb_ug RGB_EFR &kp F        &kp G    &kp GRAVE                        &kp TILDE   &kp H     &kp J    &kp K     &kp L   &kp SEMI &kp RET
+	&kp LSHFT  &kp Z             &kp X           &kp C           &kp V        &kp B    &kp SPACE &kp SPACE    &kp SPACE &kp SPACE   &kp N     &kp M    &kp COMMA &kp DOT &kp FSLH &kp SQT
+	                                             &kp CLCK        &kp LGUI     &kp LALT &mo 1     &kp SPACE    &kp SPACE &mo 2       &kp RSHFT &kp RGUI &kp INS
+			>;
+		};
+	};
+};

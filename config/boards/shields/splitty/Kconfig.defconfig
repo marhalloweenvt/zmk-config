@@ -1,0 +1,16 @@
+if SHIELD_SPLITTY_LEFT
+
+config ZMK_KEYBOARD_NAME
+	default "Splitty nRF52840"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_SPLITTY_LEFT || SHIELD_SPLITTY_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif

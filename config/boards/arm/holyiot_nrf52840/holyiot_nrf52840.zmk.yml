@@ -1,0 +1,10 @@
+file_format: "1"
+id: holyiot_nrf52840
+name: HolyIOT nrf52840
+type: board
+arch: arm
+outputs:
+  - usb
+  - ble
+url: https://wiki.makerdiary.com/nrf52840-m2/
+exposes: [holyiot_nrf52840]

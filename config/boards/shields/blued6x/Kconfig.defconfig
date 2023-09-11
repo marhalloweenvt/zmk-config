@@ -1,0 +1,6 @@
+if SHIELD_BLUED6X
+
+config ZMK_KEYBOARD_NAME
+	default "blued6x"
+
+endif

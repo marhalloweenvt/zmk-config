@@ -1,0 +1,25 @@
+if BOARD_HOLYIOT_NRF52840
+
+config BOARD
+	default "holyiot_nrf52480"
+
+if USB_DEVICE_STACK
+
+config USB_NRFX
+    default y
+
+endif # USB_DEVICE_STACK
+
+config BT_CTLR
+    default BT
+
+config ZMK_BLE
+    default y
+
+config ZMK_USB
+    default y
+
+config PINMUX
+    default y
+	
+endif # BOARD_HOLYIOT_NRF52840

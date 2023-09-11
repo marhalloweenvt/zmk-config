@@ -1,0 +1,8 @@
+file_format: "1"
+id: blued60
+name: Blued 60
+type: shield
+url: https://makerdiary.com/pages/m60-mechanical-keyboard
+requires: [holyiot_nrf52840]
+features:
+  - keys

@@ -1,0 +1,12 @@
+file_format: "1"
+id: splitty
+name: Splitty nRF52840
+type: shield
+url: https://minh.bh/
+requires: [holyiot_nrf52840]
+features:
+  - keys
+  - underglow
+siblings:
+  - splitty_left
+  - splitty_right

@@ -24,3 +24,8 @@ west build -d /home/marhalloweenvt/zmk-config/build/sofle_nrf52840/right -p -b n
 ```
 west build -d /home/marhalloweenvt/zmk-config/build/left -p -b holyiot_nrf52840 -- -DSHIELD=splitty_left -DZMK_CONFIG="/home/marhalloweenvt/zmk-config/config"
 ```
+
+## blued6x
+```
+west build -d /home/marhalloweenvt/zmk-config/build/blued6x -p -b holyiot_nrf52840 -- -DSHIELD=blued6x -DZMK_CONFIG="/home/marhalloweenvt/zmk-config/config"
+```

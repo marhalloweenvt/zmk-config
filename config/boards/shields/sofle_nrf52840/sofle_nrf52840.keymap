@@ -18,24 +18,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        gaming_layer {
-// ------------------------------------------------------------------------------------------------------------
-// |  GESC |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   \   |
-// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |  INS  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
-            bindings = <
-&gresc     &kp N1 &kp N2         &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSLH
-&kp TAB    &kp Q  &kp W          &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &bspc_del
-&kp LCTRL  &kp A  &kp S          &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT  &kp Z  &kp X          &kp C    &kp V     &kp B  &kp C_MUTE   &out OUT_TOG &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                  &mt LCTRL CAPS &none    &kp LALT  &mo 2  &kp SPACE    &kp RET      &mo 3  &kp RALT  &none     &kp DEL
-            >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
-        };
-
         default_layer {
 // ------------------------------------------------------------------------------------------------------------
 // |  GESC |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   \   |
@@ -54,6 +36,24 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        gaming_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  GESC |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   \   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |  INS  |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE| CTRL  | ALT   | GUI  |
+            bindings = <
+&gresc     &kp N1 &kp N2         &kp N3   &kp N4    &kp N5                           &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp BSLH
+&kp TAB    &kp Q  &kp W          &kp E    &kp R     &kp T                            &kp Y  &kp U     &kp I     &kp O    &kp P    &bspc_del
+&kp LCTRL  &kp A  &kp S          &kp D    &kp F     &kp G                            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&kp LSHFT  &kp Z  &kp X          &kp C    &kp V     &kp B  &kp C_MUTE   &out OUT_TOG &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+                  &mt LCTRL CAPS &none    &kp LALT  &mo 2  &kp SPACE    &kp RET      &mo 3  &kp RALT  &none     &kp DEL
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
         lower_layer {
 // TODO: Some binds are waiting for shifted keycode support.
 // ------------------------------------------------------------------------------------------------------------
@@ -65,7 +65,7 @@
             bindings = <
 &kp GRAVE   &kp F1    &kp F2    &kp F3      &kp F4    &kp F5                    &kp F6    &kp F7    &kp F8          &kp F9    &kp F10   &kp F11
 &trans      &kp PG_UP &kp UP    &kp PG_DN   &trans    &trans                    &kp MINUS &kp UNDER &kp EQUAL       &kp PLUS  &trans    &kp F12
-&trans      &kp LEFT  &kp DOWN  &kp RIGHT   &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
+&trans      &kp LEFT  &kp DOWN  &kp RIGHT   &kp DLLR  &tog 1                    &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR  &kp RPAR  &kp PIPE
 &trans      &kp EQUAL &kp MINUS &kp KP_PLUS &kp LBRC  &kp RBRC  &trans   &trans &kp LBKT  &kp RBKT  &kp SEMI        &kp COLON &kp BSLH  &trans
                       &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans    &trans          &kp INS
             >;

@@ -35,6 +35,7 @@
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |OUT TOG|  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               | GUI | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE|  ALT  | GUI   | DEL  |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &gresc1    &kp N1  &kp N2          &kp N3    &kp N4    &kp N5                                 &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BSLH
@@ -54,6 +55,7 @@
             // |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
             // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |OUT TOG|  N   |  M    |  ,    |  .   |   /   | SHIFT |
             //               |     | ALT  | CTRL | LOWER|  SPACE |  | ENTER | RAISE|  ALT  |       | DEL  |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &gresc1    &kp N1  &kp N2          &kp N3  &kp N4    &kp N5                                 &kp N6     &kp N7    &kp N8     &kp N9   &kp N0    &kp BSLH
@@ -74,6 +76,7 @@
             // |       |   <- |  v   |  ->  | SNIP | TOG 1|                   |  ^   |  &    |  *    |  (   |   )   |   |   |
             // |       |   =  |  -   |  +   |  {   |  }   |  BOOT  |  |       |  [   |  ]    |  ;    |  :   |   \   |       |
             //                |      |      |      |      |        |  |       |      |       |       | INS  |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &kp GRAVE  &kp F1     &kp F2     &kp F3       &kp F4         &kp F5                           &kp F6     &kp F7     &kp F8           &kp F9     &kp F10   &kp F11
@@ -93,6 +96,7 @@
             // |     | ALT  | CTRL | SHIFT |       | TOG 1|                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
             // |     | UNDO | CUT  | COPY  | PASTE |      |      |  | BOOT |      |      |       |      |       |       |
             //              |      |       |       |      |      |  |      |      |      |       |      |
+            // ------------------------------------------------------------------------------------------------------------
 
             bindings = <
 &bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                         &ext_power EP_ON  &ext_power EP_OFF  &trans    &trans     &trans   &out OUT_TOG
@@ -111,7 +115,6 @@
     behaviors {
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
@@ -119,7 +122,6 @@
         };
         gresc1: grave_escape1 {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE_1";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
 
@@ -135,7 +137,6 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp Q &kp W &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N4 &kp EXCL &kp AT &kp POUND &kp DLLR>;
-            label = "PPW";
         };
     };
 };

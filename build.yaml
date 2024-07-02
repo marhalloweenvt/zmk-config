@@ -13,10 +13,10 @@
 #
 ---
 include:
-  # - board: nice_nano_v2
-  #   shield: sofle_nrf52840_left
-  # - board: nice_nano_v2
-  #   shield: sofle_nrf52840_right
+  - board: nice_nano_v2
+    shield: sofle_nrf52840_left
+  - board: nice_nano_v2
+    shield: sofle_nrf52840_right
   # - board: holyiot_nrf52840
   #   shield: splitty_left
   # - board: holyiot_nrf52840
@@ -25,5 +25,5 @@ include:
   #   shield: settings_reset
   # - board: holyiot_nrf52840
   #   shield: settings_reset
-  - board: holyiot_nrf52840
-    shield: blued6x
+  # - board: holyiot_nrf52840
+  #   shield: blued6x

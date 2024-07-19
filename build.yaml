@@ -21,8 +21,8 @@ include:
   #   shield: splitty_left
   # - board: holyiot_nrf52840
   #   shield: splitty_right
-  # - board: nice_nano_v2
-  #   shield: settings_reset
+  - board: nice_nano_v2
+    shield: settings_reset
   # - board: holyiot_nrf52840
   #   shield: settings_reset
   # - board: holyiot_nrf52840

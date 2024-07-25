@@ -44,7 +44,6 @@
     behaviors {
         bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
-            label = "BACKSPACE_DELETE";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -52,11 +51,10 @@
         };
         gresc: grave_escape {
             compatible = "zmk,behavior-mod-morph";
-            label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT)>;
         };
     };
 };
@@ -64,15 +62,9 @@
 / {
     macros {
         ASDF: ASDF {
-            label = "ASDF";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp A &kp S &kp D &kp F>
-                , <&macro_release &kp LSHFT>
-                , <&macro_tap &kp Q &kp W &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N4 &kp EXCL &kp AT &kp HASH &kp DLLR>
-                ;
+            bindings = <&kp LS(A) &kp LS(S) &kp LS(D) &kp LS(F) &kp Q &kp W &kp E &kp R &kp N1 &kp N2 &kp N3 &kp N4 &kp EXCL &kp AT &kp POUND &kp DLLR>;
         };
     };
 };

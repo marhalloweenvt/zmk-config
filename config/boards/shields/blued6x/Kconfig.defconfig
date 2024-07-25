@@ -3,4 +3,10 @@ if SHIELD_BLUED6X
 config ZMK_KEYBOARD_NAME
 	default "blued6x"
 
+config USB_DEVICE_MANUFACTURER
+    	default "marhalloweenvt"
+
+config BT_DIS_MANUF
+    	default "marhalloweenvt"
+
 endif

@@ -33,4 +33,7 @@ config ZMK_SPLIT
 config ZMK_BLE
 	default y
 
+config ZMK_EXT_POWER
+    default y
+
 endif

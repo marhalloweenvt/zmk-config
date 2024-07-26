@@ -1,19 +1,36 @@
 # Copyright (c) 2020 Ryan Cross
 # SPDX-License-Identifier: MIT
 
-if SHIELD_SOFLE_NRF52840_LEFT
+if SHIELD_SOFLE_NRF52840_DONGLE
 
 config ZMK_KEYBOARD_NAME
-    default "Sofle ZMK"
-
+    default "Sofle ZMK dongle"
+	
 config ZMK_SPLIT_ROLE_CENTRAL
-    default y
+	default y
+
+config ZMK_USB
+	default y
 
 endif
 
+
 if SHIELD_SOFLE_NRF52840_LEFT || SHIELD_SOFLE_NRF52840_RIGHT
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+config ZMK_SPLIT_BLE_CENTRAL_BATTERY_LEVEL_FETCHING
+	default y
+
+endif
+
+if SHIELD_SOFLE_NRF52840_LEFT || SHIELD_SOFLE_NRF52840_RIGHT || SHIELD_SOFLE_NRF52840_DONGLE
 
 config ZMK_SPLIT
     default y
+
+config ZMK_BLE
+	default y
 
 endif

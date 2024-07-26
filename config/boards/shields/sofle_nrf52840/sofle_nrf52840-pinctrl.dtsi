@@ -6,6 +6,13 @@
             bias-pull-up;
         };
     };
+    qdec_sleep: qdec_sleep {
+        group1 {
+            psels = <NRF_PSEL(QDEC_A, 0, 31)>,
+                    <NRF_PSEL(QDEC_B, 0, 29)>;
+            low-power-enable;
+        };
+    };
 };
 
 // Set up the QDEC hardware based driver and give it the same label as the deleted node.

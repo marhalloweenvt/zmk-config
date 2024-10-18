@@ -6,3 +6,4 @@ url: https://makerdiary.com/pages/m60-mechanical-keyboard
 requires: [holyiot_nrf52840]
 features:
   - keys
+  - studio

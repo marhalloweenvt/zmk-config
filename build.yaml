@@ -29,3 +29,4 @@ include:
   #   shield: settings_reset
   - board: holyiot_nrf52840
     shield: blued6x
+    snippet: studio-rpc-usb-uart

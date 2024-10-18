@@ -1,10 +1,11 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <layouts/common/65percent/ansi.dtsi>
 
 / {
 	chosen {
 		zmk,kscan = &kscan0;
-		zmk,matrix_transform = &default_transform;
+		zmk,physical-layout = &layout_65_ansi;
 	};
 
 	kscan0: kscan {
@@ -58,3 +59,6 @@ RC(4,0) RC(4,1) RC(4,2)                     RC(4,7)                             
 	};
 };
 
+&layout_65_ansi {
+    transform = <&default_transform>;
+};
